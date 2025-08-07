@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CRM</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simple CRM</h1>
+            <button id="addLeadBtn" class="btn btn-primary">Add New Lead</button>
+        </header>
+
+        <main>
+            <div class="sales-pipeline">
+                <div class="stage" id="leads">
+                    <h3>Leads</h3>
+                    <div class="stage-stats" id="leads-stats">0 leads</div>
+                    <div class="stage-content" data-stage="lead"></div>
+                </div>
+                <div class="stage" id="qualified">
+                    <h3>Qualified</h3>
+                    <div class="stage-stats" id="qualified-stats">0 leads</div>
+                    <div class="stage-content" data-stage="qualified"></div>
+                </div>
+                <div class="stage" id="proposal">
+                    <h3>Proposal</h3>
+                    <div class="stage-stats" id="proposal-stats">0 leads</div>
+                    <div class="stage-content" data-stage="proposal"></div>
+                </div>
+                <div class="stage" id="negotiation">
+                    <h3>Negotiation</h3>
+                    <div class="stage-stats" id="negotiation-stats">0 leads</div>
+                    <div class="stage-content" data-stage="negotiation"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- Modal for adding/editing leads -->
+    <div id="leadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add New Lead</h2>
+            <form id="leadForm">
+                <div class="form-group">
+                    <label for="leadName">Name:</label>
+                    <input type="text" id="leadName" required>
+                </div>
+                <div class="form-group">
+                    <label for="leadEmail">Email:</label>
+                    <input type="email" id="leadEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="leadPhone">Phone:</label>
+                    <input type="tel" id="leadPhone">
+                </div>
+                <div class="form-group">
+                    <label for="leadCompany">Company:</label>
+                    <input type="text" id="leadCompany">
+                </div>
+                <div class="form-group">
+                    <label for="leadValue">Deal Value ($):</label>
+                    <input type="number" id="leadValue" step="0.01" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="leadStage">Stage:</label>
+                    <select id="leadStage">
+                        <option value="lead">Lead</option>
+                        <option value="qualified">Qualified</option>
+                        <option value="proposal">Proposal</option>
+                        <option value="negotiation">Negotiation</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save Lead</button>
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

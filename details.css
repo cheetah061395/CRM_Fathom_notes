@@ -1,0 +1,222 @@
+/* Lead Details Page Specific Styles */
+
+/* Details Page Layout */
+.lead-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.details-section {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.details-section h3 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Details Grid Layout */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-item label {
+    font-weight: bold;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.detail-item span {
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+/* Editable Fields */
+.editable-field {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #ecf0f1;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #2c3e50;
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.editable-field:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: #f8f9fa;
+}
+
+.editable-field:hover {
+    border-color: #bdc3c7;
+}
+
+/* Special Field Styling */
+.value-field {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.stage-field {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.readonly-field {
+    font-size: 16px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Notes Field */
+.notes-header {
+    margin-bottom: 15px;
+}
+
+.notes-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-fathom {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+.btn-fathom:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+}
+
+.btn-fathom:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-webhook {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(240, 147, 251, 0.3);
+}
+
+.btn-webhook:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(240, 147, 251, 0.4);
+}
+
+.btn-webhook:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-secondary-small {
+    background: #95a5a6;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary-small:hover {
+    background: #7f8c8d;
+}
+
+.notes-container {
+    width: 100%;
+}
+
+.notes-field {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.5;
+    padding: 12px;
+}
+
+.notes-field:focus {
+    min-height: 150px;
+}
+
+/* Special Detail Styling */
+.value-highlight {
+    color: #27ae60 !important;
+    font-weight: bold;
+    font-size: 18px !important;
+}
+
+.stage-badge {
+    background: #3498db;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px !important;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    background: #95a5a6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background: #7f8c8d;
+}
+
+/* Page Layout */
+.page {
+    min-height: 100vh;
+}

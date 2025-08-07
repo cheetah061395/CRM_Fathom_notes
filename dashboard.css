@@ -1,0 +1,70 @@
+/* Dashboard/Pipeline Specific Styles */
+
+/* Sales Pipeline Grid */
+.sales-pipeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Stage Columns */
+.stage {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 400px;
+}
+
+.stage h3 {
+    background: #34495e;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.stage-content {
+    padding: 15px;
+}
+
+.stage-stats {
+    text-align: center;
+    padding: 10px;
+    background: #f8f9fa;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* Lead Cards */
+.lead-card {
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lead-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.lead-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.lead-company {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.lead-value {
+    color: #27ae60;
+    font-weight: bold;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Details - Simple CRM</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button id="backToMainBtn" class="btn btn-secondary">← Back to CRM</button>
+                <h1 id="leadDetailsTitle">Lead Details</h1>
+            </div>
+        </header>
+        
+        <main>
+            <div class="lead-details-container">
+                <div class="details-section">
+                    <h3>Contact Information</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <label for="detailName">Name:</label>
+                            <input type="text" id="detailName" class="editable-field" />
+                        </div>
+                        <div class="detail-item">
+                            <label for="detailEmail">Email:</label>
+                            <input type="email" id="detailEmail" class="editable-field" />
+                        </div>
+                        <div class="detail-item">
+                            <label for="detailPhone">Phone:</label>
+                            <input type="tel" id="detailPhone" class="editable-field" />
+                        </div>
+                        <div class="detail-item">
+                            <label for="detailCompany">Company:</label>
+                            <input type="text" id="detailCompany" class="editable-field" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="details-section">
+                    <h3>Deal Information</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <label for="detailValue">Deal Value ($):</label>
+                            <input type="number" id="detailValue" class="editable-field value-field" step="0.01" min="0" />
+                        </div>
+                        <div class="detail-item">
+                            <label for="detailStage">Current Stage:</label>
+                            <select id="detailStage" class="editable-field stage-field">
+                                <option value="lead">Lead</option>
+                                <option value="qualified">Qualified</option>
+                                <option value="proposal">Proposal</option>
+                                <option value="negotiation">Negotiation</option>
+                            </select>
+                        </div>
+                        <div class="detail-item">
+                            <label>Created:</label>
+                            <span id="detailCreated" class="readonly-field">-</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="details-section">
+                    <h3>Notes</h3>
+                    <div class="notes-header">
+                        <div class="notes-actions">
+                            <button id="fathomBtn" class="btn btn-fathom" title="Import Fathom AI Summary">
+                                🎥 Import Fathom Summary
+                            </button>
+                            <button id="checkWebhooksBtn" class="btn btn-webhook" title="Check for incoming summaries">
+                                📥 Check Incoming
+                            </button>
+                            <button id="clearNotesBtn" class="btn btn-secondary-small" title="Clear Notes">
+                                🗑️ Clear
+                            </button>
+                        </div>
+                    </div>
+                    <div class="notes-container">
+                        <textarea id="detailNotes" class="editable-field notes-field" 
+                                  placeholder="Add notes about this lead or import a Fathom AI meeting summary..." rows="6"></textarea>
+                    </div>
+                </div>
+                
+                <div class="details-section">
+                    <h3>Actions</h3>
+                    <div class="action-buttons">
+                        <button id="moveToQualified" class="btn action-btn" onclick="leadDetails.moveLeadToStage('qualified')">Move to Qualified</button>
+                        <button id="moveToProposal" class="btn action-btn" onclick="leadDetails.moveLeadToStage('proposal')">Move to Proposal</button>
+                        <button id="moveToNegotiation" class="btn action-btn" onclick="leadDetails.moveLeadToStage('negotiation')">Move to Negotiation</button>
+                        <button id="moveToLead" class="btn action-btn" onclick="leadDetails.moveLeadToStage('lead')">Move to Lead</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="lead-details.js"></script>
+</body>
+</html>
